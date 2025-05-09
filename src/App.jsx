@@ -24,6 +24,14 @@ function App() {
     setNewArticle("");
   }
 
+  const handleRemoveArticle = (index) => {
+    const updatedArticle = articles.filter((task, i) => {
+      return i != index;
+    })
+
+    setArticles(updatedArticle);
+  }
+
 
   return (
     <div className="container">
@@ -32,6 +40,7 @@ function App() {
         {articles.map((article, index) => (
           <li key={index} className="list-group-item">
             {article}
+            <div className="trash"><i onClick={() => { handleRemoveArticle(index) }} class="fa-solid fa-trash-can"></i></div>
           </li>
         ))}
       </ul>
