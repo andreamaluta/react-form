@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const articoli = [
+const articles = [
   {
     "titolo": "Elezioni 2025: tutto quello che c'è da sapere",
     "autore": "Marco Rossi",
@@ -37,10 +37,16 @@ const articoli = [
 function App() {
 
   return (
-    <h1>Articoli</h1>
-
-
-
+    <div className="container">
+      <h1>Lista di Articoli</h1>
+      <ul className="list-group">
+        {articles.map((article) => (
+          <li key={article.id} className="list-group-item">
+            {article.titolo}
+          </li>
+        ))}
+      </ul>
+    </div>
 
   )
 
