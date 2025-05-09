@@ -46,6 +46,12 @@ function App() {
           </li>
         ))}
       </ul>
+      <form>
+        <div className="input-group mt-3">
+          <input type="text" className='form-control' placeholder='Nuovo Articolo' />
+          <button className='btn btn-primary'>Add Article</button>
+        </div>
+      </form>
     </div>
 
   )
